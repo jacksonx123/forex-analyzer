@@ -612,7 +612,7 @@ with tab2:
                 st.markdown("**Displacement**")
                 for disp in all_disps:
                     emoji = "🟢" if disp["type"] == "bullish" else "🔴"
-                    st.write(emoji + " " + disp["type"].upper() + " @ " + str(round(disp["price"], 5)))
+                    st.write(emoji + " " + disp["type"].upper() + " @ " + str(round(disp["close"], 5)))
 
             ob_text = ", ".join([ob["type"] + " OB at " + str(round(ob["top"], 5)) for ob in all_obs]) or "None"
             fvg_text = ", ".join([f["type"] + " FVG " + str(round(f["bottom"], 5)) + "-" + str(round(f["top"], 5)) for f in all_fvgs]) or "None"
